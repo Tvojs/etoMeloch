@@ -1,0 +1,72 @@
+:root{
+    --main-color: rgb(26, 51, 151);
+    --second-color: #EFBA85;
+}
+
+.container{
+    position: relative;
+    display: inline-block;
+    width: 800px;
+}
+
+.passport{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+p{
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    transition: 0.5s;
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+button:hover{
+    background-color: var(--second-color); /* Исправлено: убрал пробел и использовал переменную */
+}
+
+nav {
+    background: var(--main-color); /* Исправлено: убрал пробел */
+    padding: 15px 0;
+    text-align: center;
+}
+
+a {
+    font-size: 24px;
+    color: var(--main-color); /* Исправлено: убрал пробел */
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--second-color); /* Исправлено: убрал пробел и использовал переменную */
+}
+
+.main{
+    img{max-width: 60%;
+    padding: 20px;}
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    min-height: 100%;
+}
+
+.column-images {
+    flex: 1;
+}
+
+.column-text {
+    flex: 1;
+}
