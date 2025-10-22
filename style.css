@@ -1,62 +1,69 @@
-:root{
-    --main-color: rgb(26, 51, 151);
-    --second-color: #EFBA85;
+:root {
+    --main-color: #000000;
+    --second-color: #1A3397;
 }
 
-.container{
+.container {
     position: relative;
     display: inline-block;
     width: 800px;
+    padding-top: 50px;
 }
 
-.passport{
+.passport {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 15%;
 }
 
-p{
+p {
     font-size: 32px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Fors', 'Arial Narrow', Arial, sans-serif;
 }
 
-button{
+button {
     transition: 0.5s;
     margin-left: 200px;
     margin-top: 20px;
     margin-bottom: 40px;
-    padding: 20px;
-    font-size: 40px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 10px;
     border: none;
+    font-family: 'Fors';
 }
 
-button:hover{
-    background-color: var(--second-color); /* Исправлено: убрал пробел и использовал переменную */
+button:hover {
+    background-color: var(--second-color);
+    color: #ffffff;
 }
 
 nav {
-    background: var(--main-color); /* Исправлено: убрал пробел */
+    background: var(--main-color);
     padding: 15px 0;
     text-align: center;
 }
 
 a {
     font-size: 24px;
-    color: var(--main-color); /* Исправлено: убрал пробел */
+    color: var(--main-color);
     text-decoration: none;
-    padding: 8px 16px;
-    margin: 0 10px;
+    padding: 16px 32px;
+    margin: 0 20px;
     transition: 0.3s;
+    font-family: 'Manifont';
 }
 
 a:hover {
-    color: var(--second-color); /* Исправлено: убрал пробел и использовал переменную */
+    color: var(--second-color);
 }
 
-.main{
-    img{max-width: 60%;
-    padding: 20px;}
+.main {
+    img {
+        max-width: 60%;
+        padding: 20px;
+    }
+
     padding: 20px;
     display: flex;
     gap: 20px;
@@ -69,4 +76,236 @@ a:hover {
 
 .column-text {
     flex: 1;
+}
+
+.passphoto {
+    width: 220px;
+    height: 290px;
+    margin-top: -560px;
+    margin-left: 32px;
+}
+
+.infa {
+    text-align: center;
+}
+
+.infa img {
+    width: 1000px;
+    height: auto;
+    max-width: 100%;
+}
+
+.active {
+    font-weight: bolder;
+    color: #1A3397;
+}
+
+@font-face {
+    font-family: 'Manifont';
+    src: url('ManifontGroteskBook.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fors';
+    src: url('TTForsEducationalRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Manifont';
+}
+
+.coin-categories {
+    font-family: 'Fors';
+}
+
+.moneta {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.moneta img {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.cartinka {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.cartinka:hover {
+    transform: scale(1.1);
+}
+
+.nadpis {
+    font-family: 'Fors';
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.glavnayanadpis {
+    font-family: 'Manifont';
+    color: #1A3397;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.footer {
+    color: #ffffff;
+    background-color: #1A3397;
+    font-family: 'Manifont';
+}
+
+#forma {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#capcha {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--main-color);
+    font-family: 'Manifont';
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 2px solid var(--second-color);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Fors';
+}
+
+input:focus,
+select:focus {
+    border-color: var(--second-color);
+    outline: none;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    font-family: 'Fors';
+}
+
+.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    font-family: 'Fors';
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: 2px solid var(--second-color);
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    background-color: #e9ecef;
+    border-color: var(--main-color);
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+    transform: scale(1.2);
+}
+
+.radio-label {
+    margin: 0;
+    font-family: 'Fors';
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    border: 2px solid var(--second-color);
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin: 2px 0 0 0;
+    transform: scale(1.2);
+}
+
+.checkbox-label {
+    margin: 0;
+    font-family: 'Fors';
+    color: var(--main-color);
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.radio-option input[type="radio"]:focus,
+.checkbox-group input[type="checkbox"]:focus {
+    outline: 2px solid var(--second-color);
+    outline-offset: 2px;
 }

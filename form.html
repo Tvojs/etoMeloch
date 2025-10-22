@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-коллекция монет.Заказ монет</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav id="top" style="background: #ffffff;">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="https://cbr.ru/cash_circulation/memorable_coins/coins_base/" target="_blank"
+            rel="noopener noreferrer">Веб-коллекция</a>
+        <a href="passport.html">Паспорт</a>
+        <a href="form.html" class="active">Заказать монеты</a>
+        <a href="about.html#knopcka">История</a>
+    </nav>
+    <nav style="background: #ffffff;">
+        <a href="#capcha" target="_self">Я не робот</a>
+        <a href="#forma" target="_self">Оставьте свои данные</a>
+    </nav>
+
+    <h1 style="color: #1A3397; text-align: center;">Решение алгоритмической задачи</h1>
+    <div id="capcha">
+
+        <div class="input-form">
+            <div class="form-row">
+                <label for="sideX">Сторона X:</label>
+                <input type="number" id="sideX" step="any" min="0.1" required>
+            </div>
+
+            <div class="form-row">
+                <label for="sideY">Сторона Y:</label>
+                <input type="number" id="sideY" step="any" min="0.1" required>
+            </div>
+
+            <div class="form-row">
+                <label for="sideZ">Сторона Z:</label>
+                <input type="number" id="sideZ" step="any" min="0.1" required>
+            </div>
+
+            <button type="button" id="calculateBtn">Определить тип треугольника</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <h1 style="color: #1A3397; text-align: center;">Оставьте свои данные для заказа</h1>
+    <div id="forma">
+        <form class="form" action='https://www.google.ru/?hl=ru' method="get" target="_blank">
+            <div class="form-row">
+                <label for="surname">Фамилия</label>
+                <input type="text" id="surname" name="surname" value="Иванов" required>
+            </div>
+
+            <div class="form-row">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" value="Иван" required>
+            </div>
+
+            <div class="form-row">
+                <label for="lastname">Отчество</label>
+                <input type="text" id="lastname" name="lastname">
+            </div>
+
+            <div class="form-row">
+                <label for="group">Номер группы</label>
+                <input type="number" id="group" name="group">
+            </div>
+
+            <div class="form-row">
+                <label for="birth">Дата рождения</label>
+                <input type="date" id="birth" name="birth">
+            </div>
+
+            <div class="form-row">
+                <label for="adress">Адрес</label>
+                <input type="text" id="adress" name="adress">
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-row">
+                <label for="date">Дата отправки</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-row">
+                <label for="coin-set">Набор монет</label>
+                <select id="coin-set" name="coin-set">
+                    <option value="">Выберите набор</option>
+                    <option value="starter">Стартовый набор</option>
+                    <option value="premium">Премиум набор</option>
+                    <option value="collector">Коллекционный набор</option>
+                    <option value="limited">Лимитированное издание</option>
+                </select>
+            </div>
+
+
+            <div class="form-row">
+                <label>Способ доставки:</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="courier" name="delivery" value="courier">
+                        <label for="courier" class="radio-label">Курьерская доставка</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="post" name="delivery" value="post">
+                        <label for="post" class="radio-label">Почта России</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="pickup" name="delivery" value="pickup">
+                        <label for="pickup" class="radio-label">Самовывоз</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="personal" name="personal" value="yes">
+                    <label for="personal" class="checkbox-label">
+                        Согласен(а) на обработку персональных данных
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label for="password">Код из email</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <input type="hidden" name="source" value="website">
+
+            <div class="form-row">
+                <button type="submit">Отправить данные</button>
+            </div>
+        </form>
+    </div>
+
+    <a href="#top" target="_self">
+        <h2>Наверх</h2>
+    </a>
+</body>
+<footer class="footer">
+    <h1 style="margin-left: 450px">Счастье в мелочах</h1>
+</footer>
+
+</html>

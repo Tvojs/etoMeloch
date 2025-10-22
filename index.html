@@ -1,32 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Веб-коллекция монет.Главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav style="background: #f0f0f0; padding: 15px;">
-        <a href="index.html">Главная</a> |
-        <a href="about.html">О проекте</a> |
-        <a href="galery.html">Галерея</a> |
-        <a href="passport.html">Паспорт</a>
 
-        <h1>Монеты - это не просто ресурс для покупки товаров</h1>
+<body>
+    <nav id="top" style="background: #ffffff;">
+        <a href="index.html" class="active">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="https://cbr.ru/cash_circulation/memorable_coins/coins_base/" target="_blank"
+            rel="noopener noreferrer">Веб-коллекция</a>
+        <a href="passport.html">Паспорт</a>
+        <a href="form.html">Заказать монеты</a>
+        <a href="about.html#knopcka">История</a>
+    </nav>
+    <nav style="background: #ffffff;">
+        <a href="#catalogmonet" target="_self">Каталог монет</a>
+        <a href="#smeshariki" target="_self">
+            <img class="cartinka"
+                src="https://cdn.monetnik.ru/storage/market-lot/81/06/518281/1875659_mainViewLot_2x.avif"
+                alt="Смешарики">
+        </a>
+        <a href="#primeri" target="_self">Примеры монет из коллекции</a>
     </nav>
 
-    <div class="main">
-        <div class="column-images">
-        <img src="https://ru-moneta.ru/upload/monety-21/2020-01rub-r32.jpg" alt="">
-        <img src="https://imperial-mag.ru/img/s/L3Nob3BfMy84LzkvMC9pdGVtXzg5MDcwL3Nob3BfcHJvcGVydHlfZmlsZV84OTA3MF85ODY2OC5qcGc/original/moneta-1-rubl-1729-kopiya-ot-13062024-185244-avers.jpg?signed=SmpjHtOcBaa2j4yXUZdneA&at=1718294133" alt="">
-        </div>
-        <div class="column-text">
-            <p>я люблю деньги блабла бла</p>
+    <div id="catalogmonet" class="main">
+        <div style="margin-left: 100px;" class="column-text">
+            <h2>Каталог монет</h2>
 
+            <ul class="coin-categories">
+                <li>Российские монеты
+                    <ul>
+                        <li>Имперский период
+                            <ol>
+                                <li>Монеты Петра I</li>
+                                <li>Монеты Екатерины II</li>
+                            </ol>
+                        </li>
+                        <li>Советский период</li>
+                        <li>Современная Россия</li>
+                    </ul>
+                </li>
+                <li>Иностранные монеты
+                    <ol>
+                        <li>Европейские</li>
+                        <li>Азиатские</li>
+                        <li>Американские</li>
+                    </ol>
+                </li>
+            </ul>
         </div>
     </div>
 
+    <div id="primeri" class="moneta">
+        <h2 style="text-align: center;">Примеры монет из коллекции</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div>
+                <img src="https://zvonmoneta.ru/image/cache/catalog/00000/13032020/5015-0010r-1000x1000.jpg"
+                    alt="Сочи 2014">
+                <p style="text-align: center;">Сочи 2014</p>
+            </div>
+            <div>
+                <img src="https://zvonmoneta.ru/image/cache/catalog/products/moneta/%D0%AE%D0%B1%D0%B8%D0%BB%D0%B5%D0%B9%D0%BA%D0%B8%20%D0%A0%D0%A4/GVS/in_1189-1000x1000.jpg"
+                    alt="Владивосток">
+                <p style="text-align: center;">Владивосток</p>
+            </div>
+            <div>
+                <img src="https://zvonmoneta.ru/image/cache/catalog/products/moneta/%D0%AE%D0%B1%D0%B8%D0%BB%D0%B5%D0%B9%D0%BA%D0%B8%20%D0%A0%D0%A4/GVS/5714-0034-1000x1000.jpg"
+                    alt="Выборг">
+                <p style="text-align: center;">Выборг</p>
+            </div>
+            <div id="smeshariki">
+                <img src="https://cdn.monetnik.ru/storage/market-lot/81/06/518281/1875659_mainViewLot_2x.avif"
+                    alt="Смешарики">
+                <p style="text-align: center;">Смешарики</p>
+            </div>
+        </div>
+    </div>
+    <a href="#top" target="_self">
+        <h2>Наверх</h2>
+    </a>
 </body>
+<footer class="footer">
+    <h1 style="margin-left: 450px">Счастье в мелочах</h1>
+</footer>
+
 </html>
