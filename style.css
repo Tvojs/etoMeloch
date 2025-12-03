@@ -19,18 +19,18 @@
 p {
     font-size: 32px;
     font-family: 'Fors', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
 button {
     transition: 0.5s;
-    margin-left: 200px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    align-items: center;
     padding: 10px 20px;
     font-size: 24px;
     border-radius: 10px;
     border: none;
     font-family: 'Fors';
+    cursor: pointer;
 }
 
 button:hover {
@@ -39,7 +39,7 @@ button:hover {
 }
 
 nav {
-    background: var(--main-color);
+    background: #ffffff;
     padding: 15px 0;
     text-align: center;
 }
@@ -59,15 +59,15 @@ a:hover {
 }
 
 .main {
-    img {
-        max-width: 60%;
-        padding: 20px;
-    }
-
     padding: 20px;
     display: flex;
     gap: 20px;
     min-height: 100%;
+}
+
+.main img {
+    max-width: 60%;
+    padding: 20px;
 }
 
 .column-images {
@@ -120,6 +120,8 @@ h1,
 h2,
 h3 {
     font-family: 'Manifont';
+    color: #1A3397;
+    text-align: center;
 }
 
 .coin-categories {
@@ -179,6 +181,13 @@ nav:nth-of-type(2) {
     color: #ffffff;
     background-color: #1A3397;
     font-family: 'Manifont';
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-title {
+    text-align: center;
+    color: #ffffff;
 }
 
 #forma {
@@ -202,6 +211,9 @@ nav:nth-of-type(2) {
 .form-row {
     display: flex;
     flex-direction: column;
+    font-family: 'Fors';
+    font-size: 20px;
+    color: #1A3397;
 }
 
 label {
@@ -308,4 +320,175 @@ select:focus {
 .checkbox-group input[type="checkbox"]:focus {
     outline: 2px solid var(--second-color);
     outline-offset: 2px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.coins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.coin-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.coin-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.coin-card p {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.coin-card .form-row {
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.coin-card .form-row input {
+    width: 100%;
+    max-width: 120px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding-top: 30px;
+    }
+    
+    .main {
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .column-images, 
+    .column-text {
+        flex: none;
+        width: 100%;
+    }
+    
+    p {
+        font-size: 24px;
+    }
+    
+    button {
+        font-size: 18px;
+        padding: 10px 18px;
+    }
+    
+    nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin: 2px;
+    }
+    
+    .coins-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    
+    nav {
+        padding: 10px 5px;
+    }
+    
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin: 1px;
+    }
+    
+    .coins-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .coin-card {
+        padding: 10px;
+    }
+    
+    .coin-card img {
+        max-width: 150px;
+    }
+    
+    .secondary-nav {
+        flex-wrap: wrap;
+        gap: 15px !important;
+    }
+    
+    .cartinka {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 375px) {
+    p {
+        font-size: 18px;
+    }
+    
+    nav a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .main {
+        padding: 5px;
+    }
 }
