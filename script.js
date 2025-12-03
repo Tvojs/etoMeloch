@@ -73,3 +73,96 @@ function checkRightTriangle(x, y, z) {
 function openLongread() {
     window.open('http://etomeloch.tilda.ws/', '_blank', 'noopener,noreferrer');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
+    initTriangleCalculator();
+    initCoinShop();
+});
+
+function initNavigation() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+
+        if (link.target === '_blank') {
+            link.addEventListener('click', function() {
+                this.innerHTML = '<span class="loading">⏳</span> ' + this.textContent;
+            });
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
+    initSmoothScroll();
+    setActiveNavLink();
+});
+
+function initNavigation() {
+    const toggler = document.querySelector('.navbar-toggler');
+    const collapse = document.querySelector('.navbar-collapse');
+    
+    if (toggler && collapse) {
+        toggler.addEventListener('click', function() {
+            collapse.classList.toggle('show');
+        });
+        
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    collapse.classList.remove('show');
+                }
+            });
+        });
+    }
+}
+
+function initSmoothScroll() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                
+                window.scrollTo({
+                    top: offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+function setActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        link.classList.remove('active');
+        
+        if (linkHref === currentPage || 
+            (currentPage === 'index.html' && linkHref === 'index.html') ||
+            (currentPage === '' && linkHref === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
